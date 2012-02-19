@@ -18,12 +18,17 @@ public class LifeTrackerActivity extends Activity {
 		DbHelper helper = DbHelper.getHelper(this);
 		Dao dao = helper.getDao();
 
+		//init table if not exist
 		boolean exist = dao.isInfoExist();
 		Log.e("info exist====", String.valueOf(exist));
 		if (!exist) {
 			dao.createInfo();
 			Log.e("===complete===", "info creation");
 		}
+		
+		//
+		
+		
 	}
 
 }
