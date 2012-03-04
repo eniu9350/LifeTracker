@@ -1,10 +1,18 @@
 package info.realjin.lifetracker.presentation;
 
 import info.realjin.lifetracker.R;
+import info.realjin.lifetracker.entity.Task;
+import info.realjin.lifetracker.entity.TimeSlice;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Canvas;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TabHost;
 
 /**
@@ -14,6 +22,26 @@ import android.widget.TabHost;
  * 
  */
 public class MainActivity extends TabActivity {
+	private List<Task> tasks;
+	private Canvas canvas;
+
+	public List<Task> getTasks() {
+		return tasks;
+	}
+
+	public void setTasks(List<Task> tasks) {
+		this.tasks = tasks;
+	}
+
+	public MainActivity() {
+		super();
+		tasks = new ArrayList<Task>();
+		Task a = new Task();
+		Task b = new Task();
+		tasks.add(a);
+		tasks.add(b);
+	}
+
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
@@ -34,4 +62,6 @@ public class MainActivity extends TabActivity {
 				.setContent(intent);
 		tabHost.addTab(spec);
 	}
+
+	
 }

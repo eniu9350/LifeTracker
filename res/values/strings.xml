@@ -6,4 +6,6 @@
 
     
     <string name="test1">test111111</string>
+    <string name="btStrartTaskText">start</string>
+    <string name="etTaskToStart">name of task</string>
 </resources>
