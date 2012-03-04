@@ -76,7 +76,7 @@ public class TaskManager {
 	 * save history of task running
 	 */
 	public void save(Task t){
-		
+		dao.saveTask(t);
 	}
 
 }

@@ -2,7 +2,9 @@ package info.realjin.lifetracker;
 
 import info.realjin.lifetracker.persistence.Dao;
 import info.realjin.lifetracker.persistence.DbHelper;
+import info.realjin.lifetracker.presentation.MainActivity;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,7 +34,9 @@ public class LifeTrackerActivity extends Activity {
 		Button bt = (Button) findViewById(R.id.SerialMain_btStart);
 		bt.setOnClickListener(new Button.OnClickListener() {
 			public void onClick(View v) {
-				
+				Intent myIntent = new Intent(LifeTrackerActivity.this,
+						MainActivity.class);
+				LifeTrackerActivity.this.startActivity(myIntent);
 			}
 
 		});
