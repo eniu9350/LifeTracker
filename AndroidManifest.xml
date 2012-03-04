@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".presentation.MainActivity" >
         </activity>
+        <activity android:name=".presentation.CurrentTasksActivity" >
+        </activity>
     </application>
 
 </manifest>
